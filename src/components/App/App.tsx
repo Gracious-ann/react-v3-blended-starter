@@ -72,7 +72,7 @@ export default function App() {
 
       {isModalOpen && (
         <Modal onClose={closeCreate}>
-          {isCreatePost && <CreatePostForm onCancel={closeCreate} />}
+          {isCreatePost && isLoading && <CreatePostForm onCancel={closeCreate} />}
 
           {isEditPost && editedPost && (
             <EditPostForm onCancel={closeEdit} valuesEdit={editedPost} />
